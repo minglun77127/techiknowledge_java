@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>TechiKnowledgeWTP</display-name>
+  <resource-ref>
+    <description>DB Connection</description>
+    <res-ref-name>jdbc/TechiknowledgeDB</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
+  <servlet>
+    <description></description>
+    <display-name>InteractiveUser</display-name>
+    <servlet-name>InteractiveUser</servlet-name>
+    <servlet-class>com.techiknowledge.controller.InteractiveUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InteractiveUser</servlet-name>
+    <url-pattern>/customer.html</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TestDBconnection</display-name>
+    <servlet-name>TestDBconnection</servlet-name>
+    <servlet-class>TestDBconnection</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestDBconnection</servlet-name>
+    <url-pattern>/TestDBconnection</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TestInteractiveUser</display-name>
+    <servlet-name>TestInteractiveUser</servlet-name>
+    <servlet-class>TestInteractiveUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestInteractiveUser</servlet-name>
+    <url-pattern>/TestInteractiveUser</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>InteractiveOffer</display-name>
+    <servlet-name>InteractiveOffer</servlet-name>
+    <servlet-class>com.techiknowledge.controller.InteractiveOffer</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InteractiveOffer</servlet-name>
+    <url-pattern>/offer.html</url-pattern>
+  </servlet-mapping>
+</web-app>
