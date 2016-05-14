@@ -1,5 +1,30 @@
 (function(){
+	
 	var app = angular.module("technicianlist",[]);
+	
+	app.directive("requestTitle", function(){
+		return {
+			restrict: "E",
+			templateUrl: "../views/request.jsp"
+		};
+	});
+	
+	app.directive("reviewForm", function(){
+		return {
+			restrict: "E",
+			templateUrl:"../views/review-form.jsp",
+			
+			controller: function(){
+				this.review = {};
+				this.addReview = function(technician){
+					technician.reviews.push(this.review);
+					this.review = {};
+				};
+			},
+			
+		    controllerAs: "reviewCtrl"
+		};
+	});
 	
 	app.controller("ListController",function(){
 		this.technicians = technicians;
