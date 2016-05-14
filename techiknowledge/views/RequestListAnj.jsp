@@ -27,13 +27,13 @@
 						<p>{{technician.introduction}}</p>
 					</blockquote>
 					<blockquote ng-show="panel.isSelected(2)" ng-repeat="request in technician.reqComplete">
-						<p>{{request.title}}</p>
+						<request-title></request-title>
 					</blockquote>
 					<blockquote ng-show="panel.isSelected(3)" ng-repeat="review in technician.reviews">
 						<h2>Stars: {{review.stars}}</h2>
 						<p>{{review.comment}}</p>
-						
-						<form name="reviewForm" ng-controller="ReviewController as reviewCtrl"
+						<review-form></review-form>
+						<!-- <form name="reviewForm" ng-controller="ReviewController as reviewCtrl"
 												ng-submit="reviewForm.$valid && reviewCtrl.addReview(technician)" novalidate>
 						    <blockquote>
 						    	<h2>Stars: {{reviewCtrl.review.stars}}</h2>
@@ -45,7 +45,7 @@
 							</select>
 							<textarea ng-model="reviewCtrl.review.comment" required></textarea>
 							<input type="submit" value="Submit"/>
-						</form>
+						</form> -->
 					</blockquote>
 				</div>		
 			</div>					
